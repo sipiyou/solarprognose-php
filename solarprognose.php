@@ -259,7 +259,7 @@ class solarPrognose extends generalHelpers {
     public function parseData () {
         $resp = json_decode ($this->lastResponse,true);
 
-        print_r ($resp);
+        //print_r ($resp);
         $this->requestStatus = $this->getStateFromArray ($resp, 'status');
         $this->nextExecutionTime = $this->getStateFromArray ($resp, 'preferredNextApiRequestAt','epochTimeUtc');
         $this->datalinename = $this->getStateFromArray ($resp, 'datalinename');
